@@ -1,0 +1,349 @@
+body{
+    width: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background: linear-gradient(135deg, rgb(150, 6, 155), rgb(0, 11, 48));
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    justify-content: space-between;
+    text-shadow: black 10px 0 10px; 
+    z-index: 1000;
+}
+.project-desc{
+    color: black;
+    padding: 10px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+nav{
+    width: 40%;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+header a ::after{
+    content: 'ertert';
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    background: black;
+    transition: width 0.4s ease;
+}
+header a :hover ::after{
+    width: 100%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#home{
+    background: linear-gradient(rgba(36, 84, 173, 0.377),rgba(35, 26, 161, 0.295)),url("./pruple.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+#about{
+    background-color: rgba(255, 255, 255, 0.699);
+    width: 80%;
+    margin-top: 40px;
+    padding: 20px;
+    box-shadow: 0.5px 0.5px 10px grey;
+    display: flex;
+    font-size: 15px;
+    line-height: 20px;
+    gap: 30px;
+    text-align: justify;
+}
+.contactInfo-skills{
+    width: 50%;
+    gap: 20px;
+}
+.about-me{
+    width: 50%;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+}
+.progression{
+    background-color: rgb(239, 243, 243);
+    border-radius: 5px;
+    margin: 5px;
+    animation: typing;
+}
+.progression-bar{
+    border-radius: 5px;
+    height: 10px;
+    width: 0;
+    animation: progress 5s ease-in-out;
+    background: linear-gradient(black, blueviolet);
+}
+@keyframes progress{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: var(--width);
+    }
+}
+.line{
+    background-color: blueviolet;
+    border-radius: 5px;
+    height: 10px;
+}
+.skills{
+    gap: 45px;
+    display: flex;
+    flex-direction: column;
+}
+.skill-title{
+    margin-bottom: 6px;
+}
+#projects{
+    margin: 50px;
+    padding: 20px;
+}
+#projects h1{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 0;
+}
+.project-row{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.project{
+    font-family:monospace;
+    width: 40%;
+    margin: 1em;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.699);
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+.project:hover{
+    animation: pulse;
+    animation-duration: 2s;
+}
+.project-title{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+}
+.project-desc{
+    color: black;
+    padding: 10px;
+}
+.name-title,.profession{
+    text-align: center;
+}
+#contact{
+    background: linear-gradient(rgba(0, 68, 255, 0.336),rgba(255, 255, 255, 0.267)),url(purple1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.contact-card{
+    background-color: rgba(255, 255, 255, 0.699);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    box-shadow: 0 0 10px grey;
+    border-radius: 6px;
+}
+.get-in-touch, .contact-form{
+    width: 50%;
+}
+.get-in-touch {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+input, textarea{
+    width: 90%;
+    height: 30px;
+    margin-block: 10px;
+    border-radius: 3px;
+    padding: 10px;
+}
+button {
+    width: 90%;
+    margin-top: 30px;
+    height: 50px;
+    color: white;
+    /* background-color: rgb(155, 160, 122); */
+    border-radius: 3px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+background: linear-gradient(blueviolet, rgb(82, 19, 141));
+}
+button:hover{
+     color: #ffffff;
+}
+.social {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+.cercle {
+    width: 40px;
+    height: 40px; 
+    border: 4px solid black;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.cercle:hover{
+    background-color: blueviolet;
+    color: #ffffff;
+    border-radius: 50% ;
+}
+.script {
+    display: flex;
+    gap: 30px;
+    margin: 20px; 
+    font-size: 25px; 
+}
+footer{
+    text-align: center;
+}
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 20ch;
+    } 
+    100%{
+        width: 0;     
+    }
+}
+@keyframes blink{
+    50%{
+        border-radius: transparent
+}
+}
+@media only screen and (max-width:940px){
+    #about{
+        flex-direction: column;
+    }
+     .name-profile, .email-phone{
+        width: 100%;
+    }
+    .about-me{
+        width: 100%;
+        font-size: larger;
+    }
+    .contactInfo-skills{
+        width: 100%;
+    }
+    .contact-card{
+        flex-direction: column;
+    }
+    .contact-form{
+        width: 100%;
+    }
+    .get-in-touch{
+        width: 100%;
+        font-size: larger;
+    }
+    header{
+        flex-direction: column;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+    }
+    header nav{
+        width: 100%;
+    }
+    .project{
+        width: 100%;
+    }
+    .project-row{
+        flex-wrap: wrap;
+    }
+    .script{
+        align-items: center;
+        justify-content: center;
+    }
+    .logo{
+        font-size: larger;
+    }
+    .name-title{
+        font-size: 30px;
+    }
+    .project{
+        height: 60%;
+    } 
+    .project-desc{
+        font-size: larger;
+    } 
+    .name-profile ,.email-phone {
+        font-size: larger;
+    }
+}
+.profession {
+    overflow: hidden;/*ensures the text is hidden as it's typed*/
+    border-right: 3px white;/*cursore effect*/
+    white-space: nowrap;
+    width: 20ch;/*difines the visible width in chracter*/
+    animation: typing 8s steps(25) infinite,/*typing +deleting combined*/
+    blink 0.3s step-start infinite;/*blinking cursore*/
+}
+.project-date{
+    color: blueviolet;
+    font-size: larger;
+}
+@keyframes profess{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: var(--width);
+    }
+} 
+.fa-solid {
+    font-size: 15px;
+}
